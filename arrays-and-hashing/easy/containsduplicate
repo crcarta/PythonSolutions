@@ -1,0 +1,10 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        x = set()
+        for i,h in nums:
+            for j in x:
+                if (i + j) == target:
+                    return [j,i]
+            x.add(i)
+        
+
