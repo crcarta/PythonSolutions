@@ -1,0 +1,8 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        hmap: dict[int, int] = {}
+        for i, h in enumerate(nums):
+            if (target-h) in hmap:
+                return [hmap[target-h], i]
+            hmap[h]=i
+
